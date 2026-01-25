@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{geometry}
+ \geometry{
+ letterpaper,
+ total={170mm,237mm},
+ left=20mm,
+ top=15mm,
+ }
+\usepackage{setspace}
+\spacing{1.5}
+\setlength{\parindent}{0pt}
+%Falta agregar una portada bien hecha aparte.
+\LARGE{\title{Tareas de primer parcial-Topología}}
+\author{Alumnos: \\
+Erick Román Montemayor Treviño - 1957959 \\
+Renata - 1956093\\
+Diego - \\
+Everardo Flores Rivera - 2127301}
+\begin{document}
+\maketitle
+
+\paragraph{1}
+\textit{Sea X un conjunto y $\mathcal{A} $ un anillo sobre X. Sea $\{A_n\}_{n\in\mathbb{N}}$. Demostrar por inducción que $\bigcap\limits_{n\in\mathbb{N}}A_n\in\mathcal{A} $}
+
+El caso base fue demostrado en clase, ahora partiendo de la hipótesis inductiva, esto es:
+
+$\bigcap\limits_{n=1}^{n=k}A_n\in\mathcal{A}$ veamos que se cumple para $n=k+1$
+
+\paragraph{2}
+\textit{Hallar un anillo que no sea algebra.}
+
+\paragraph{3}
+\textit{Sean X, Y conjuntos y $S_y$ una $\sigma-$álgebra en Y. Sea $f:X\rightarrow Y$, demuestre que la colección $\{f^{-1}(B):B\in S_y\}$ es una $\sigma-$álgebra }
+
+\paragraph{4}
+\textit{Demostrar que $(0,1]=\bigcap\limits_{n\in\mathbb{N}}(0,1+\frac{1}{n})$.}
+
+Veamos que $(0,1]\subset \bigcap\limits_{n\in\mathbb{N}}(0,1+\frac{1}{n})$.
+
+Sea $x\in(0,1]$, esto es $0<x\leq1$ , por propiedad arquimediana existe $ N \in\mathbb{N}\hspace{4px}t.q \hspace{4px} \forall n\geq N \hspace{4px} 0< \frac{1}{n} \leqslant  x<1$ entonces $x\in[\frac{1}{n},1)$
+entonces $x\in\bigcup\limits_{n\in\mathbb{N}-\{1\}}[\frac{1}{n},1)$\\Por tanto $(0,1)\subset\bigcup\limits_{n\in\mathbb{N}-\{1\}}[\frac{1}{n},1)$
+
+Ahora veamos la otra contención.
+
+Sea $x\in\bigcup\limits_{n\in\mathbb{N}-\{1\}}[\frac{1}{n},1)$, entonces $0<\frac{1}{n_0}\leq x<1$ para algun $n_0\in\mathbb{N}-\{1\}$\\$x\in(0,1)$\\ Por tanto $(0,1)\supset\bigcup\limits_{n\in\mathbb{N}-\{1\}}[\frac{1}{n},1)$
+
+Esto demuestra la igualdad de los conjuntos.
+\paragraph{5}
+\textit{Demostrar las 5 propiedades de $F_\sigma$ y $G_\delta$}
+\begin{itemize}
+    \item $F_\sigma$ y $G_\delta$ son bolerianos
+    
+    Sabemos que todos los conjuntos abiertos son Bolerianos por la definición, ademas sabemos que la intersección numerable de conjuntos de una $\sigma-algebra$ es elemento de la $\sigma-algebra$, así $G_\delta$ es Boleriano. Analogamente todos los cerrados son bolerianos y por definición de $\sigma-algebra$ la union numerablede cerrados también, asi $F_\sigma$ es Boleriano.
+
+    \item Si A es $F_\sigma$, entonces $A^c=G_\delta$
+    
+
+    \item Si A es $G_\delta$, entonces $A^c=F_\sigma$
+    \item La union numerable de conjuntos $F_\sigma$ es $F_\sigma$
+    \item La intersección numerable de conjuntos $G_\delta$ es $G_\delta$
+\end{itemize}
+
+\paragraph{6}
+\textit{Sea X conjunto y S $\sigma-algebra$. Sean $x_0\in X; E\in S$. Definimos $\mu_{x_0}:S\rightarrow [0,\infty]$ Como \(\mu_{x_0}(E)=
+\begin{cases}
+1, & x_0\in E \\
+0,  & x_0\notin E
+\end{cases}
+\)\\ Demostrar que $\mu_{x_0}$ es medida.}
+
+
+
+\end{document}

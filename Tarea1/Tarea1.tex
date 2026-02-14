@@ -82,6 +82,21 @@ Esto demuestra la igualdad de los conjuntos.
 \end{cases}
 \)\\ Demostrar que $\mu_{x_0}$ es medida.}
 
+\paragraph{7}
+\textit{Sea $t \in \mathbb{R}$ y $A \subset \mathbb{R}$. Se define el conjunto\[t\cdot A = \{\, t a : a \in A \,\}.\] y se conoce como dilatcación de A. Demostrar que $m^{*}(t\cdot A)=|t| \cdot m^{*}(A)$}
+Sea la coleccion $\{{I_n}\}_{n\in \mathbb{N}},$ numerable tal que  $A\subset \bigcup_{k=1}^\infty I_n$ entonces $t\cdot A \subset\bigcup_{k=1}^\infty t\cdot I_n$.
+Se tiene que 
+\[
+m^{*}(t\cdot A) \le \sum_{n \in \mathbb{N}}|  t\cdot I_n |=|t|\cdot \sum_{n \in \mathbb{N}}|I_n |
+\]
+entonces $m^{*}(t\cdot A) \le |t| \cdot m^{*}(A)$ esto es por ínfimo
+para la otra desigualdad
+\[
+m^{*}(A)=m^{*}((1/t)\cdot tA) \le |1/t|m^{*}(t\cdot A)
+\]
+el último paso es por la demostración de la primera parte, y mulplicando por t tenemos que $|t|\cdot m^{*}(A)\le m^{*}(t\cdot A)$. 
+
+Por lo tanto $|t|\cdot m^{*}(A)= m^{*}(t\cdot A)$
 
 
 \end{document}

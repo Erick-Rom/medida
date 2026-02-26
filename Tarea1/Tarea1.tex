@@ -52,11 +52,14 @@ Entonces $x\in(0,1+\frac{1}{n}) \forall n\in\mathbb{N}$
 
 Entonces $x\in\bigcap\limits_{n\in\mathbb{N}}(0,1+\frac{1}{n})$
 
-Ahora veamos la otra contención.
+Ahora veamos la otra contención. Esto es que $\bigcap\limits_{n\in\mathbb{N}}(0,1+\frac{1}{n})\subset (0,1]$
 
-Sea $x\in\bigcap\limits_{n\in\mathbb{N}}(0,1+\frac{1}{n})$, esto es: $\forall n\in\mathbb{N}, 0<x<1+\frac{1}{n}$.
 
-Ahora supongamos que $1\leq x<1+\frac{1}{n}$
+Sea $x\in\bigcap\limits_{n\in\mathbb{N}}(0,1+\frac{1}{n})$, esto es: $\forall n\in\mathbb{N}, 0<x<1+\frac{1}{n}$. 
+
+De aqui es evidente que $0<x\leq1$. Ahora veamos que $x\ngtr 1$
+
+Supongamos que $x>1\Rightarrow x=1+\frac{1}{n_0}$ para algun $n_0\in\mathbb{N}$. Ahora por principio Arquimideano tenemos lo siguiente: $\exists N>n_0 :\space 1+\frac{1}{N}<1+\frac{1}{n_0}=x$. Entonces $x\notin\bigcap\limits_{n\in\mathbb{N}}(0,1+\frac{1}{n})$ lo cual es una contracción.
 
 Esto demuestra la igualdad de los conjuntos.
 \paragraph{5}
@@ -83,6 +86,9 @@ Esto demuestra la igualdad de los conjuntos.
 \)\\ Demostrar que $\mu_{x_0}$ es medida.}
 
 \paragraph{7}
+\textit{Sea $(X,\mu, S)$ un esp. de medida y ${E_n}_{n\in\mathbb{N}}$ una suc decreciente con respecto la contención en S. Si $\mu (E_1)<\infty$, demuestre que $\mu (\bigcap\limits_{n\in\mathbb{N}}E_n)=\lim\limits_{n\to\infty}\mu(E_n)$}
+
+\paragraph{8}
 \textit{Sea $t \in \mathbb{R}$ y $A \subset \mathbb{R}$. Se define el conjunto\[t\cdot A = \{\, t a : a \in A \,\}.\] y se conoce como dilatcación de A. Demostrar que $m^{*}(t\cdot A)=|t| \cdot m^{*}(A)$}
 Sea la coleccion $\{{I_n}\}_{n\in \mathbb{N}},$ numerable tal que  $A\subset \bigcup_{k=1}^\infty I_n$ entonces $t\cdot A \subset\bigcup_{k=1}^\infty t\cdot I_n$.
 Se tiene que 
@@ -98,5 +104,22 @@ el último paso es por la demostración de la primera parte, y mulplicando por t
 
 Por lo tanto $|t|\cdot m^{*}(A)= m^{*}(t\cdot A)$
 
+\paragraph{9}
+\textit{Sean $a,b,c,d\in\mathbb{R}\space : a<b \space\wedge c<d$.\\
+Demostrar que $m^*((a,b)\cup(c,d))=(b-a)+(d-c)$ ssi $(a,b)\cap(c,d)\neq\emptyset $}
 
+\paragraph{10}
+\textit{Si $A\in\mu$. Demostrar que $t+E\in\mu$ $\forall t\in\mathbb{R}$}
+
+\paragraph{11}
+\textit{Demostrar que $E\subset\mathbb{R}$ es medible ssi $\forall\epsilon>0\exists U$ abto. en  $\mathbb{R}$ t.q $C\subset E\subset U \wedge m(U-C)<\epsilon$}
+
+\paragraph{12}
+\textit{Sea $E\subset[0,1]$ medible con $m(E)>0$. Demostrar $\exists x,y\in E : x>y$ tales que $x-y\in\mathbb{Q}^c$}
+
+\paragraph{13}
+\textit{Sea V el conjunto de Vitali si $E\in\mu$, demostrar que $m(E)=0$.}
+
+\paragraph{14}
+\textit{Demostrar que $\mathbb{R}-\bigcup\limits_{n\in\mathbb{N}}(r_n-\frac{1}{n^2},r_n+\frac{1}{n^2})\neq\emptyset$ donde $r_n\in\mathbb{Q}$}
 \end{document}

@@ -88,6 +88,54 @@ Esto demuestra la igualdad de los conjuntos.
 \paragraph{7}
 \textit{Sea $(X,\mu, S)$ un esp. de medida y ${E_n}_{n\in\mathbb{N}}$ una suc decreciente con respecto la contención en S. Si $\mu (E_1)<\infty$, demuestre que $\mu (\bigcap\limits_{n\in\mathbb{N}}E_n)=\lim\limits_{n\to\infty}\mu(E_n)$}
 
+Se sabe que si $\{F_n\}\subset S$ es sucesión creciente, entonces
+\[\mu\left(\bigcup_{n=1}^{\infty} F_n\right)=\lim_{n\to\infty}\mu(F_n).\]
+
+Sea la sucesión $G_n$ tal que
+\[G_n=E_1-E_n.\]
+
+P.D. $\{G_n\}_{n\in\mathbb{N}}$ es sucesión creciente.
+
+Si tomamos $G_1$ y $G_2$,
+
+\[G_1=E_1-E_1=\varnothing,\]
+\[G_2=E_1-E_2.\]
+
+Pero $E_2\subset E_1$, al menos que $E_1=E_2$, por ende
+\[G_1\subset G_2\]
+
+Supongamos que
+\[G_1\subset G_2\subset \cdots \subset G_n.\]
+
+P.D.
+\[G_1\subset G_2\subset \cdots \subset G_n \subset G_{n+1}\]
+
+\[G_{n+1}=E_1-E_{n+1}\]
+\[G_n=E_1-E_n.\]
+
+Tenemos que
+\[E_{n+1}\subset E_n \subset E_1,\]
+
+por conjuntos tenemos que
+\[E_1-E_{n+1} \supset E_1-E_n\Rightarrow G_{n+1}\supset G_n.\]
+
+Por lo tanto
+\[G_1\subset G_2\subset \cdots \subset G_n\subset G_{n+1}.\]
+
+es decir, $\{G_n\}_{n\in\mathbb{N}}$ es creciente respecto a contención.
+
+Entonces
+\[\mu\left(\bigcup_{n=1}^{\infty} G_n\right)=\lim_{n\to\infty}\mu(G_n).\]
+
+\[\mu\left(\bigcup_{n=1}^{\infty} (E_1-E_n)\right)=\lim_{n\to\infty} \mu(E_1-E_n).\]
+
+\[\mu\left(E_1-\bigcap_{n=1}^{\infty} E_n\right)=
+\lim_{n\to\infty} \left[\mu(E_1)-\mu(E_n)\right]\quad \text{por teorema de conjuntos y un teorema de medida}\]
+
+\[\mu(E_1)-\mu\left(\bigcap_{n=1}^{\infty} E_n\right)=\mu(E_1)-\lim_{n\to\infty} \mu(E_n).\]
+por lo tanto 
+\[\mu\left(\bigcap_{n=1}^{\infty} E_n\right)=\lim_{n\to\infty} \mu(E_n).\]
+
 \paragraph{8}
 \textit{Sea $t \in \mathbb{R}$ y $A \subset \mathbb{R}$. Se define el conjunto\[t\cdot A = \{\, t a : a \in A \,\}.\] y se conoce como dilatcación de A. Demostrar que $m^{*}(t\cdot A)=|t| \cdot m^{*}(A)$}
 Sea la coleccion $\{{I_n}\}_{n\in \mathbb{N}},$ numerable tal que  $A\subset \bigcup_{k=1}^\infty I_n$ entonces $t\cdot A \subset\bigcup_{k=1}^\infty t\cdot I_n$.
@@ -108,11 +156,69 @@ Por lo tanto $|t|\cdot m^{*}(A)= m^{*}(t\cdot A)$
 \textit{Sean $a,b,c,d\in\mathbb{R}\space : a<b \space\wedge c<d$.\\
 Demostrar que $m^*((a,b)\cup(c,d))=(b-a)+(d-c)$ ssi $(a,b)\cap(c,d)\neq\emptyset $}
 
+$(\Rightarrow)$ Si $(a,b)\cap(c,d)\neq\varnothing$, por ende a,b,c,d son todos diferentes a lo mucho uno es igual a 0 entonces\[
+(a,b)\cup(c,d)=(\min(a,c),\max(b,d)).
+\] y
+\[m^*((\min(a,c),\max(b,d)))=\max(b,d)-\min(a,c).\]
+
+Se tiene que
+\[\max(b,d)\le b+d\qquad \text{y} \qquad\min(a,c)\ge a+c.\]
+
+Luego
+\[
+\max(b,d)-\min(a,c)<b+d-a-c=(b-a)+(d-c).\]
+
+\[\Rightarrow m^*((a,b)\cup(c,d))<(b-a)+(d-c).\]
+
+por lo tanto
+\[m^*((a,b)\cup(c,d))=(b-a)+(d-c)\Rightarrow(a,b)\cap(c,d)=\varnothing.\]
+$(\Leftarrow)$
+\[m^*((a,b)\cup(c,d))\le (b-a)+(d-c)\]
+por subaditividad.
+
+Sean $I_1=(a,b)$ y $I_2=(c,d)$.
+
+Como $I_1\cap I_2=\varnothing$ y $I_1\cup I_2\subset \bigcup J_n$,
+
+\[\sum |J_n| \ge (b-a)+(d-c),\] porque
+
+\[\sum |J_n|\ge (b-a)\qquad \text{y} \qquad\sum |J_n|\ge (d-c).\]
+
+\[m^*(I_1\cup I_2)\ge (b-a)+(d-c)\]
+por definición de ínfimo. Por lo tanto
+\[m^*((a,b)\cup(c,d))=(b-a)+(d-c).\]\[\Longleftrightarrow(a,b)\cap(c,d)=\varnothing.\]
+
 \paragraph{10}
 \textit{Si $A\in\mu$. Demostrar que $t+E\in\mu$ $\forall t\in\mathbb{R}$}
 
 \paragraph{11}
 \textit{Demostrar que $E\subset\mathbb{R}$ es medible ssi $\forall\epsilon>0\exists U$ abto. en  $\mathbb{R}$ t.q $C\subset E\subset U \wedge m(U-C)<\epsilon$}
+
+$\Rightarrow$
+Si $E$ es medible se sabe que si $\varepsilon/2>0$ $\exists U$ abierto en $\mathbb{R}$ tq. $E \subset U \Rightarrow m(U-E)<\varepsilon/2$ y 
+$C$ cerrado tq. $C \subset E \Rightarrow m(C-E)<\varepsilon/2$.
+
+Sabemos que
+
+\[m(U-C)=m((U-E)\cup(E-C))\le m(U-E)+m(E-C) \text{ por subaditividad}\]
+
+\[<\varepsilon/2+\varepsilon/2=\varepsilon\]
+
+\[\therefore m(U-C)<\varepsilon\]
+
+$\Leftarrow$ P.D.\[m(E)=m(U\cap E)+m(U\cap E^c), \quad E\subset U\]
+
+\[E=(U\cap E)\cup(U\cap E^c)\text{ por conjuntos}\]
+
+\[m(E)\le m(U\cap E)+m(U\cap E^c)\text{ por subaditividad}\]
+
+\[m(U\cap E)+m(U\cap E^c)=m(E)+m(U-E)<m(E)+\varepsilon\text{ por igualdad de conjuntos y la hipótesis}\]
+
+\[\therefore m(U\cap E)+m(U\cap E^c)\le m(E) \text{ por ser epsilon arbritario}\]
+
+\[\therefore m(E)=m(U\cap E)+m(U\cap E^c)\]
+
+\[\therefore E \text{ es medible.}\]
 
 \paragraph{12}
 \textit{Sea $E\subset[0,1]$ medible con $m(E)>0$. Demostrar $\exists x,y\in E : x>y$ tales que $x-y\in\mathbb{Q}^c$}

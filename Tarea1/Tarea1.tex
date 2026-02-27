@@ -121,8 +121,30 @@ Esto demuestra la igualdad de los conjuntos.
 1, & x_0\in E \\
 0,  & x_0\notin E
 \end{cases}
-\)\\ Demostrar que $\mu_{x_0}$ es medida.}
+\)\\ Demostrar que $\mu_{x_0}$ es medida.} \\
+\begin{itemize}
+    \item[$\star$] Medida del vacío:
+    Por vacuidad, sabemos que el conjunto vacío no contiene elementos, luego $x_0 \notin \emptyset$. Por la definición de nuestra función, esto implica directamente que:
+    $$\mu_{x_0}(\emptyset) = 0$$
 
+    \item[$\star$] $\sigma$-aditividad:
+    Sea $\{E_n\}_{n \in \mathbb{N}}$ una sucesión de conjuntos en $S$ ajenos por pares (es decir, $E_i \cap E_j = \emptyset$ para $i \neq j$). Queremos demostrar que $\mu_{x_0}\left(\bigcup_{n \in \mathbb{N}} E_n\right) = \sum_{n \in \mathbb{N}} \mu_{x_0}(E_n)$.
+    
+    Analizamos por casos:
+    
+    \textbf{Caso 1: Suponga que $x_0 \notin E_n \forall n \in \mathbb{N}$.} \\
+    Si $x_0$ no está en ningún conjunto de la sucesión, entonces tampoco está en su unión, por lo que $x_0 \notin \bigcup_{n \in \mathbb{N}} E_n$. 
+    Evaluando la función, tenemos que $\mu_{x_0}\left(\bigcup_{n \in \mathbb{N}} E_n\right) = 0$. 
+    Por otro lado, la suma de las medidas es $\sum_{n \in \mathbb{N}} \mu_{x_0}(E_n) = \sum_{n \in \mathbb{N}} 0 = 0$. 
+    Ambos lados son iguales a cero, por lo que la igualdad se cumple.
+    
+    \textbf{Caso 2: Suponga que existe un índice $k \in \mathbb{N}$ tal que $x_0 \in E_k$.} \\
+    Al pertenecer a $E_k$, evidentemente $x_0 \in \bigcup_{n \in \mathbb{N}} E_n$, lo que implica que la medida de la unión es $\mu_{x_0}\left(\bigcup_{n \in \mathbb{N}} E_n\right) = 1$.
+    Ahora, como los conjuntos son \textbf{ajenos por pares}, $x_0$ no puede pertenecer a ningún otro conjunto $E_j$ con $j \neq k$. Por lo tanto, $\mu_{x_0}(E_k) = 1$ y $\mu_{x_0}(E_j) = 0$ para todo $j \neq k$. 
+    Al hacer la suma infinita obtenemos:
+    $$\sum_{n \in \mathbb{N}} \mu_{x_0}(E_n) = \mu_{x_0}(E_k) + \sum_{j \neq k} \mu_{x_0}(E_j) = 1 + 0 = 1$$
+    Ambos lados de la ecuación son iguales a 1, demostrando la igualdad.
+\end{itemize}
 \paragraph{7}
 \textit{Sea $(X,\mu, S)$ un esp. de medida y ${E_n}_{n\in\mathbb{N}}$ una suc decreciente con respecto la contención en S. Si $\mu (E_1)<\infty$, demuestre que $\mu (\bigcap\limits_{n\in\mathbb{N}}E_n)=\lim\limits_{n\to\infty}\mu(E_n)$}
 

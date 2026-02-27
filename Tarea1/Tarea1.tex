@@ -2,6 +2,7 @@
 \usepackage[spanish]{babel}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{geometry}
  \geometry{
  letterpaper,
@@ -16,7 +17,7 @@
 \LARGE{\title{Tareas de primer parcial-Topología}}
 \author{Alumnos: \\
 Erick Román Montemayor Treviño - 1957959 \\
-Renata - 1956093\\
+Renata Capistrán Fuentes- 2079992\\
 Diego - \\
 Everardo Flores Rivera - 2127301}
 \begin{document}
@@ -41,11 +42,11 @@ Sea $X=\mathbb{Z}$, $S=\{\varnothing\}\cup P(2\mathbb{Z})$, es fácil ver que S 
 \\
 Sea $\mathcal{A} = \{f^{-1}(B) : B \in S_y\}$. Para demostrar que $\mathcal{A}$ es una $\sigma$-álgebra en $X$, debemos verificar tres propiedades:
 
-\begin{enumerate}
-    \item \textbf{El conjunto vacío está en $\mathcal{A}$:}
+\begin{itemize}
+    \item[$\star$] \textbf{El vacío está en $\mathcal{A}$:}
     Como $S_y$ es una $\sigma$-álgebra en $Y$, por definición $\emptyset \in S_y$. Dado que la preimagen del conjunto vacío es el conjunto vacío, tenemos que $f^{-1}(\emptyset) = \emptyset$. Por lo tanto, $\emptyset \in \mathcal{A}$.
 
-    \item \textbf{Cerradura bajo complementos:}
+    \item[$\star$] \textbf{Cerradura bajo complementos:}
     Sea $A \in \mathcal{A}$. Por definición de nuestra colección, existe un conjunto $B \in S_y$ tal que $A = f^{-1}(B)$. El complemento de $A$ en $X$ es $A^c = X \setminus A = X \setminus f^{-1}(B)$.
     
     Por propiedades de la preimagen, sabemos que el complemento de una preimagen es la preimagen del complemento:
@@ -53,7 +54,7 @@ Sea $\mathcal{A} = \{f^{-1}(B) : B \in S_y\}$. Para demostrar que $\mathcal{A}$ 
     
     Como $B \in S_y$ y $S_y$ es una $\sigma$-álgebra, su complemento $B^c = Y \setminus B \in S_y$. Al ser la preimagen de un elemento de $S_y$, concluimos que $A^c = f^{-1}(B^c) \in \mathcal{A}$.
 
-    \item \textbf{Cerradura bajo uniones numerables:}
+    \item[$\star$] \textbf{Cerradura de uniones numerables:}
     Sea $\{A_n\}_{n \in \mathbb{N}} \subset \mathcal{A}$ una sucesión numerable de conjuntos. Para cada $n \in \mathbb{N}$, existe $B_n \in S_y$ tal que $A_n = f^{-1}(B_n)$.
     
     La unión de la sucesión es:
@@ -64,7 +65,7 @@ Sea $\mathcal{A} = \{f^{-1}(B) : B \in S_y\}$. Para demostrar que $\mathcal{A}$ 
     
     Dado que $S_y$ es una $\sigma$-álgebra y $\{B_n\}_{n \in \mathbb{N}} \subset S_y$, por definición sabemos que $\bigcup_{n \in \mathbb{N}} B_n \in S_y$. 
     Por lo tanto, $\bigcup_{n \in \mathbb{N}} A_n \in \mathcal{A}$.
-\end{enumerate}
+\end{itemize}
 
 Al cumplir las tres propiedades, concluimos que $\mathcal{A}$ es una $\sigma$-álgebra en $X$.
 

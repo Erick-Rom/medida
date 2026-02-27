@@ -18,7 +18,7 @@
 \author{Alumnos: \\
 Erick Román Montemayor Treviño - 1957959 \\
 Renata Capistrán Fuentes- 2079992\\
-Diego - \\
+Diego Sanchez- \\
 Everardo Flores Rivera - 2127301}
 \begin{document}
 \maketitle
@@ -100,10 +100,19 @@ Esto demuestra la igualdad de los conjuntos.
 
     \item Si A es $F_\sigma$, entonces $A^c=G_\delta$
     
+    El resultado se sigue directo de las leyes de Morgan.
 
     \item Si A es $G_\delta$, entonces $A^c=F_\sigma$
-    \item La union numerable de conjuntos $F_\sigma$ es $F_\sigma$
+    
+    De igual forma se sigue el resultado por las leyes de Morgan.
+
+    \item La unión numerable de conjuntos $F_\sigma$ es $F_\sigma$
+    
+    La union de los elementos de una coleccion, cuyos elementos son uniones de cerrados, a su vez la union de uniones de cerrados, puede ser vista como una propia union de cerrados.
+
     \item La intersección numerable de conjuntos $G_\delta$ es $G_\delta$
+    
+    La intersección de los elementos de una colección, cuyos elementos son intersecciones de cerrados, a su vez la intersección de intersecciones de cerrados, puede ser vista como una propia intersección de cerrados.
 \end{itemize}
 
 \paragraph{6}
@@ -220,6 +229,22 @@ por definición de ínfimo. Por lo tanto
 \paragraph{10}
 \textit{Si $A\in\mu$. Demostrar que $t+E\in\mu$ $\forall t\in\mathbb{R}$}
 
+Sea $A=\{t+E: E\in\mu\}$
+Si $E=\emptyset$
+
+Entonces $t+E=\emptyset\in\mu$
+
+$\therefore\emptyset\in A$
+
+Si $t+E\in A$
+
+$(t+E)^c=t+E^c\in A$ Ya que $E^c\in\mu$
+
+Sea $\{t+E_n\}_{n\in\mathbb{N}}\subset A$
+
+Tenemos que $\bigcup\limits_{n\in\mathbb{N}}(t+E_n)=t+\bigcup\limits_{n\in\mathbb{N}}E_n\in A$
+
+$\therefore t+E\in\mu$
 \paragraph{11}
 \textit{Demostrar que $E\subset\mathbb{R}$ es medible ssi $\forall\epsilon>0\exists U$ abto. en  $\mathbb{R}$ t.q $C\subset E\subset U \wedge m(U-C)<\epsilon$}
 
